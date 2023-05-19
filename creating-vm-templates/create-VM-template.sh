@@ -4,7 +4,7 @@ ubuntuImgBaseURL=$(dirname $ubuntuImageFromURL)
 ubuntuImgFilename=$(basename $ubuntuImageFromURL)
 proxmoxTemplateID="${TMPL_ID:-9000}"
 proxmoxTemplateName="${TMPL_NAME:-ubuntu-2204}"
-scriptTemporaryPath=/tmp/promox-shellscript-execution
+scriptTemporaryPath=/tmp/proxmox-shellscript-execution
 
 
 initialize () {
@@ -60,7 +60,7 @@ createProxmoxVMTemplate () {
 }
 
 clean () { 
-    rm -rf $scriptTmpPath 
+    rm -rf $scriptTemporaryPath 
 }
 
 
